@@ -120,7 +120,7 @@ func colored(icon string, percentage int) string {
 func updatePower() string {
 	const powerSupply = "/sys/class/power_supply/"
 	var enFull, enNow, enPerc int = 0, 0, 0
-	var plugged, err = ioutil.ReadFile(powerSupply + "ADP1/online")
+	var plugged, err = ioutil.ReadFile(powerSupply + "AC/online")
 	if err != nil {
 		return "ÏERR"
 	}
